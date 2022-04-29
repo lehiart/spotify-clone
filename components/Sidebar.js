@@ -5,9 +5,12 @@ import {
   PlusCircleIcon,
   RssIcon,
   SearchIcon,
-} from '@heroicons/react/outline'
+} from '@heroicons/react/outline';
+import { useSession, signOut } from 'next-auth/react';
 
 const Sidebar = () => {
+  const { data: session, status } = useSession();
+
   return (
     <div className="border-r border-gray-900 p-5 text-sm text-gray-500">
       <div className="space-y-4">
@@ -52,7 +55,7 @@ const Sidebar = () => {
         <p className="cursor-pointer hover:text-white">Playslist name...</p>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;
