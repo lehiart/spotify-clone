@@ -19,7 +19,7 @@ const Center = () => {
   const { data: session } = useSession();
   const spotifyAPI = useSpotify();
   const [color, setColor] = useState(null);
-  const { playlistId, setPlaylistId, playlist, setPlaylist } = useSiteContext();
+  const { playlistId, playlist, setPlaylist } = useSiteContext();
 
   useEffect(() => {
     const random = Math.floor(Math.random() * colors.length);

@@ -9,8 +9,7 @@ function millisToMinutesAndSeconds(millis) {
 
 const Song = ({ order, track }) => {
   const spotifyAPI = useSpotify();
-  const { isPlaying, setIsPlaying, currentSong, setCurrentSong } =
-    useSiteContext();
+  const { setIsPlaying, setCurrentSong } = useSiteContext();
 
   const playSong = () => {
     setCurrentSong(track.track.id);
